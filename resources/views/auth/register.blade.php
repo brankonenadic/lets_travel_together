@@ -112,3 +112,14 @@
     </div>
 </div>
 @endsection
+
+{{-- 
+    
+       <select name="country" id="country" class="form-control mb-1">
+            <option value="">Select Country</option>
+            @foreach ($countries as $country)
+                <option value="{{ $country }}">{{ $country }}</option>
+            @endforeach
+        </select>
+    
+    --}}
