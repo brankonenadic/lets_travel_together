@@ -89,8 +89,14 @@
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Country') }}</label>
                             <div class="col-md-6">
-                                <select name="country" id="country" class="form-control" >Select Country</select>
-                                @error('country')
+                                <select name="country_id" id="country_id" class="form-control mb-1">
+                                    <option value="">Select Country</option>
+                                   
+                                    @foreach ($countries = App\Models\Country::all() as $country)
+                                        <option value="{{ $country->id }}">{{ $country->name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('country_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

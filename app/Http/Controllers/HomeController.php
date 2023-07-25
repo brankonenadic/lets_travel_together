@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,4 +27,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function show(){
+
+        $users = User::all();
+        $users = User::paginate(10);
+    
+        return view('allUsers' , ['users'=>$users]);
+    }
+ 
+    
 }

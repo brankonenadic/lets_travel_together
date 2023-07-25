@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Country;
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CountrySeeder extends Seeder
 {
@@ -14,7 +16,8 @@ class CountrySeeder extends Seeder
      */
     public function run()
     {
-        $countries = [
+        /* $countries */ 
+        DB::table('countries')->insert( [
             [
                 'id'         => 1,
                 'name'       => 'Afghanistan',
@@ -1215,8 +1218,8 @@ class CountrySeeder extends Seeder
                 'name'       => 'Zimbabwe',
                 'short_code' => 'zw',
             ],
-        ];
+        ]);
 
-        Country::insert($countries);
+       /*  Country::insert($countries); */
     }
 }
