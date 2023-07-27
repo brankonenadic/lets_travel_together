@@ -23,7 +23,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-      Interface
+      User menagment
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
