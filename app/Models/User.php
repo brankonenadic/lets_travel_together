@@ -49,4 +49,7 @@ class User extends Authenticatable
     public function country(){
         return $this->belongsTo(Country::class);
     }
+    public function posts(){
+        return $this->hasMany('App\Models\Post');
+    }
 }
