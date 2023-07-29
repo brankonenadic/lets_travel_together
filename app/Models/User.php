@@ -47,7 +47,7 @@ class User extends Authenticatable
  
 
     public function country(){
-        return $this->belongsTo(Country::class);
+        return $this->belongsTo('App\Models\Country');
     }
     public function posts(){
         return $this->hasMany('App\Models\Post');

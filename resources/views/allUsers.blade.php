@@ -2,10 +2,10 @@
 @extends('layouts.app')
 
 @section('content')
-        <div class="">
+        <div class="mt-5">
 
-                <h1 class="text-center">WELCOME</h1>
-                <div class="table-responsive">
+                <h1 class="text-center p-5">WELCOME</h1>
+                <div class="table-responsive p-3">
                   
                   <table class="table table-hover">
                     <thead>

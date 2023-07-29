@@ -31,13 +31,7 @@ class HomeController extends Controller
     {
         return view('admin.index');
     }
-    public function show(){
 
-        $users = User::all();
-        $users = User::paginate(10);
-    
-        return view('allUsers' , ['users'=>$users]);
-    }
  
     
 }

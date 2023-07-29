@@ -22,7 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/all-users', [App\Http\Controllers\HomeController::class, 'show'])->name('allUsers');
+Route::get('/all-users', [App\Http\Controllers\UserController::class, 'index'])->name('allUsers');
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin');
 Route::get('/blog', [App\Http\Controllers\PostController::class, 'index'])->name('blog');
 Route::get('/create-post', [App\Http\Controllers\PostController::class, 'createPost'])->name('create');
