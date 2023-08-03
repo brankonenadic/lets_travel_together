@@ -51,7 +51,7 @@
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Posts</h6>
           <a class="collapse-item" href="utilities-color.html">All Posts</a>
-          <a class="collapse-item" href="utilities-border.html">Add Post</a>
+          <a class="collapse-item" href="{{route('create')}}">Create Post</a>
         </div>
       </div>
     </li>
