@@ -24,7 +24,7 @@
                         <th scope="row">{{$user->id}}</th>
                         <td>{{$user->firstname}}</td>
                         <td>{{$user->lastname}}</td>
-                        <td>{{App\Models\Country::find($user->country_id)->name}}</td>
+                        <td>{{$user->country->name}}</td>
                       </tr>
                      @endforeach
                     </tbody>

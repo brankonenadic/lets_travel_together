@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::with('country')->get();
         $users = User::paginate(10);
         
         return view('allUsers' , compact('users'));
