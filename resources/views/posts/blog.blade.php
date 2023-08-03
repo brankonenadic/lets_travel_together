@@ -34,11 +34,13 @@
           @endforeach
           <!--Section: Post data-mdb-->
     
-
+          <div class="pagination justify-content-center">
+            {{$posts->links()}}
+          </div>
 
         </div>
         <!--Grid column-->
-
+        
         <!--Grid column-->
         <div class="col-md-4 mb-4 border-bottom">
           <!--Section: Sidebar-->
