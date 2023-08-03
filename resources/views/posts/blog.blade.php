@@ -9,80 +9,31 @@
         <!--Grid column-->
         <div class="col-md-8 mb-4">
           <!--Section: Post data-mdb-->
+          @foreach ($posts as $post)
+              
           <section class="border-bottom mb-4 bg-light p-3">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg"
+            <img src="{{$post->post_image}}"
               class="img-fluid shadow-2-strong rounded-3 mb-4" alt="" />
 
             <div class="row align-items-center mb-4">
               <div class="col-lg-6 text-lg-start mb-3 m-lg-0">
                 <img src="https://mdbootstrap.com/img/Photos/Avatars/img (23).jpg" class="rounded-5 shadow-1-strong me-2"
                   height="35" alt="" loading="lazy" />
-                <span> Published <u>15.07.2020</u> by</span>
-                <a href="" class="text-dark">Anna</a>
+                <span> Published <u>{{$post->created_at->diffForHumans()}}</u> by</span>
+                <a href="" class="text-dark">{{$post->user->username}}</a>
               </div>
             </div>
+            <h3>{{$post->title}}</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio sapiente molestias
-              consectetur. Fuga nulla officia error placeat veniam, officiis rerum laboriosam
-              ullam molestiae magni velit laborum itaque minima doloribus eligendi! Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Optio sapiente molestias consectetur.
-              Fuga nulla officia error placeat veniam, officiis rerum laboriosam ullam molestiae
-              magni velit laborum itaque minima doloribus eligendi!
+             {{$post->content}}
             </p>
             <p>See More...</p>
     
           </section>
+          
+          @endforeach
           <!--Section: Post data-mdb-->
-             <!--Section: Post data-mdb-->
-             <section class="border-bottom mb-4">
-                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg"
-                  class="img-fluid shadow-2-strong rounded-3 mb-4" alt="" />
     
-                <div class="row align-items-center mb-4">
-                  <div class="col-lg-6 text-lg-start mb-3 m-lg-0">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img (23).jpg" class="rounded-5 shadow-1-strong me-2"
-                      height="35" alt="" loading="lazy" />
-                    <span> Published <u>15.07.2020</u> by</span>
-                    <a href="" class="text-dark">Anna</a>
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio sapiente molestias
-                  consectetur. Fuga nulla officia error placeat veniam, officiis rerum laboriosam
-                  ullam molestiae magni velit laborum itaque minima doloribus eligendi! Lorem ipsum,
-                  dolor sit amet consectetur adipisicing elit. Optio sapiente molestias consectetur.
-                  Fuga nulla officia error placeat veniam, officiis rerum laboriosam ullam molestiae
-                  magni velit laborum itaque minima doloribus eligendi!
-                </p>
-                <p>See More...</p>
-        
-              </section>
-              <!--Section: Post data-mdb-->
-                 <!--Section: Post data-mdb-->
-          <section class="border-bottom mb-4">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg"
-              class="img-fluid shadow-2-strong rounded-3 mb-4" alt="" />
-
-            <div class="row align-items-center mb-4">
-              <div class="col-lg-6 text-lg-start mb-3 m-lg-0">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img (23).jpg" class="rounded-5 shadow-1-strong me-2"
-                  height="35" alt="" loading="lazy" />
-                <span> Published <u>15.07.2020</u> by</span>
-                <a href="" class="text-dark">Anna</a>
-              </div>
-            </div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio sapiente molestias
-              consectetur. Fuga nulla officia error placeat veniam, officiis rerum laboriosam
-              ullam molestiae magni velit laborum itaque minima doloribus eligendi! Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Optio sapiente molestias consectetur.
-              Fuga nulla officia error placeat veniam, officiis rerum laboriosam ullam molestiae
-              magni velit laborum itaque minima doloribus eligendi!
-            </p>
-            <p>See More...</p>
-    
-          </section>
-          <!--Section: Post data-mdb-->
 
 
         </div>
